@@ -1,27 +1,94 @@
+/* /*
+globals.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
+
+/* globals.css */
+
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --dark-brown: #4e342e; 
+  --light-brown: #d7ccc8; 
+  --text-color: #ffffff; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 5;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:cursive ;
+  background-color: var(--light-brown);
+  color: var(--dark-brown);
+  line-height: 1.6;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Container */
+div {
+  
+  margin: 0.5em auto;
+  padding: 1em;
+  max-width: 700px;
+  background-color: var(--light-brown);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0.4, 0.4, 0.4, 0.4);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: var(--dark-brown);
+  font-size: 2.5em;
+  margin-bottom: 0.2em;
+  border-bottom: 2px solid var(--dark-brown);
+  padding-bottom: 0.1em;
+}
+
+h2 {
+  text-align: center;
+  color: var(--dark-brown);
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  transition: color 0.3s ease;
+}
+
+/* Links */
+a {
+  color: var(--dark-brown);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-color);
+  background-color: var(--dark-brown);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Additional Styling */
+.country-details {
+  background-color: var(--dark-brown);
+  color: var(--text-color);
+  padding: 1em;
+  border-radius: 8px;
+  margin-top: 1em;
+}
+
+.not-found {
+  color: var(--text-color);
+  background-color: var(--dark-brown);
+  padding: 1em;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
 }
